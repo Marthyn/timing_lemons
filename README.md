@@ -1,4 +1,4 @@
-# Lemons Timing
+# 🍋 Lemons Timing
 
 This project was created after https://timing.71wytham.org.uk/ was forced to take his amazing live timing screen offline. 
 You can load this with any JSON feed that fits the format 😉😉, if you look around the LEMONS site you can find it. 
