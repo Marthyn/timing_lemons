@@ -19,4 +19,4 @@ In [timings.coffee](app/assets/javascripts/timing.coffee) you can set some setti
 
 ## Coffee & Legal fees
 
-If you want to pay for my coffee and Red Bull (or potential legal fees) for the 24 hours you can donate through paypal [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/pools/c/8fDJzM0hUT)
+If you want to pay for my coffee and Red Bull (or potential legal fees) for the 24 hours you can donate through paypal [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XPL8633DZPCNU&currency_code=EUR&source=url)
