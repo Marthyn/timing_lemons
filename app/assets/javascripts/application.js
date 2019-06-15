@@ -18,7 +18,3 @@
 //= require timing
 //= require bootstrap-sprockets
 //= require_tree .
-
-$(document).ready(function(){
-  $(".sticky-header").floatThead({top:50});
-});

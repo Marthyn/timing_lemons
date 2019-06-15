@@ -64,6 +64,7 @@ dataLoop()
 weatherFor = (code) ->
   switch code
     when 'mostly_sunny' then '🌤'
+    when 'cloudy' then '☁️'
     when 'sunny' then '☀️'
     when 'rain' then '🌧'
     else code
@@ -91,7 +92,7 @@ remaining = (totalSeconds) ->
 
 
 fav = (number) ->
-  if number == 38 || number == 29 || number == 10 || number == 85 || number == 81 || number == 26
+  if $("#fav").val().split(',').includes(number.toString())
     return 'fav'
 
 blink = (current, best, difference = 0.5) ->
