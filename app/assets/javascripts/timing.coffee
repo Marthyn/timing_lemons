@@ -17,7 +17,7 @@ fetchData = () ->
       $("#weather").html(weatherFor(json.params.weather))
       $("#temp").html(json.params.airTemp)
       $("#tracktemp").html(json.params.trackTemp)
-      $("#state").html("#{raceStateMessage(json.params.racestate)} #{scMessage(json)}")
+      $("#state").html("#{raceStateMessage(json.params.racestate)}")
       $("#state").attr('class', json.params.racestate)
       json.entries.forEach (entry) ->
         interval = (entry.gap - prevGap).toString()
@@ -29,10 +29,10 @@ fetchData = () ->
         tr += "<td>#{entry.gap || 'LEADER'}</td>"
         tr += "<td class='#{blink(interval, 1)}'>#{entry.gapPrev || 'LEADER'}</td>"
         tr += "<td>#{entry.classGap || 'CLASS LEADER'}</td>"
-        tr += "<td>#{entry.classGapPrev || 'CLASS LEADER'}</td>"
-        tr += "<td class='#{blink(entry.currentSector1, entry.bestSector1)}'>#{entry.currentSector1}</td>"
-        tr += "<td class='#{blink(entry.currentSector2, entry.bestSector2)}'>#{entry.currentSector2}</td>"
-        tr += "<td class='#{blink(entry.currentSector3, entry.bestSector3)}'>#{entry.currentSector3}</td>"
+        tr += "<td class='#{blink(interval, 1)}'>#{entry.classGapPrev || 'CLASS LEADER'}</td>"
+        tr += "<td>#{entry.currentSector1}</td>"
+        tr += "<td>#{entry.currentSector2}</td>"
+        tr += "<td>#{entry.currentSector3}</td>"
         tr += "<td class='#{entry.state}'>#{entry.state}</td>"
         tr += "<td>#{entry.driver}</td>"
         tr += "<td>#{entry.team}</td>"
@@ -72,14 +72,9 @@ raceStateMessage = (code) ->
   switch code
     when 'full_yellow' then 'FULL COURSE YELLOW (FCY)'
     when 'slow_zones' then 'SLOW ZONES'
+    when 'safety_car' then 'SAFETYCAR(s) DEPLOYED'
     when 'green' then ''
     else code
-
-scMessage = (json) ->
-  if json.params.safetycar == 'true'
-    'Safetycar deployed'
-  else
-    ''
 
 remaining = (totalSeconds) ->
   hours = Math.floor(totalSeconds / 3600);
@@ -96,11 +91,11 @@ remaining = (totalSeconds) ->
 
 
 fav = (number) ->
-  if number == 38 || number == 29 || number == 10 || number == 85
+  if number == 38 || number == 29 || number == 10 || number == 85 || number == 81 || number == 26
     return 'fav'
 
-blink = (current, best, difference = 0.2) ->
-  if blinkWhenClose && current - best < difference
+blink = (current, best, difference = 0.5) ->
+  if blinkWhenClose && (current - best) < difference
     return 'blink'
 
 
