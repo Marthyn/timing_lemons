@@ -14,7 +14,7 @@ fetchData = () ->
     response.json().then (json) ->
       $("#data").html('')
       $("#time").html(remaining(json.params.remaining))
-      $("#weather").html(json.params.weather)
+      $("#weather").html(weatherFor(json.params.weather))
       $("#temp").html(json.params.airTemp)
       $("#tracktemp").html(json.params.trackTemp)
       $("#state").html("#{json.params.racestate} #{scMessage(json)}")
@@ -61,6 +61,12 @@ dataLoop = () ->
 fetchData()
 dataLoop()
 
+weatherFor = (code) ->
+  switch code
+    when 'mostly_sunny' then '🌤'
+    when 'sunny' then '☀️'
+    when 'rain' then '🌧'
+    else code
 
 scMessage = (json) ->
   if json.params.safetycar == 'true'
