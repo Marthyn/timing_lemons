@@ -80,6 +80,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    dalli (2.7.10)
     dotenv (2.7.1)
     dotenv-rails (2.7.1)
       dotenv (= 2.7.1)
@@ -223,6 +224,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dalli
   dotenv-rails
   jbuilder (~> 2.5)
   jquery-rails

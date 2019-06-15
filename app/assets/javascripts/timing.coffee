@@ -34,7 +34,7 @@ fetchData = () ->
         tr += "<td class='#{blink(entry.currentSector3, entry.bestSector3)}'>#{entry.currentSector3}</td>"
         tr += "<td class='#{entry.state}'>#{entry.state}</td>"
         tr += "<td>#{entry.driver}</td>"
-        tr += "<td>#{entry.team.slice(0,10)}</td>"
+        tr += "<td>#{entry.team}</td>"
         tr += "<td>#{entry.lap}</td>"
         tr += "<td>#{entry.pitstop}</td>"
         tr += "<td>#{entry.bestSector1}</td>"
