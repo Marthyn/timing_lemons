@@ -12,6 +12,14 @@ After installing everything you need you should be able to run rails server and 
 
 Follow all the action at [RadioLemans](http://radiolemans.co)! Follow [RadioLemans](https://twitter.com/radiolemans) on twitter as well. 
 
+### Setup
+
+```bash
+git clone git@github.com:Marthyn/timing_lemons.git
+cd timing_lemons
+bundle timing_lemons
+rails server
+```
 
 ### Settings
 
