@@ -28,7 +28,7 @@ fetchData = () ->
         tr += "<td>#{entry.bestlap}</td>"
         tr += "<td class='#{blinkLap(entry.lastLap, entry.bestlap)}'>#{entry.lastlap}</td>"
         tr += "<td>#{entry.gap}</td>"
-        tr += "<td class='#{blink(interval, 1)}'>#{interval.slice(0, 5)}</td>"
+        tr += "<td class='#{blink(interval, 1)}'>#{entry.gapPrev}</td>"
         tr += "<td class='#{blink(entry.currentSector1, entry.bestSector1)}'>#{entry.currentSector1}</td>"
         tr += "<td class='#{blink(entry.currentSector2, entry.bestSector2)}'>#{entry.currentSector2}</td>"
         tr += "<td class='#{blink(entry.currentSector3, entry.bestSector3)}'>#{entry.currentSector3}</td>"
