@@ -17,7 +17,7 @@ fetchData = () ->
       $("#weather").html(weatherFor(json.params.weather))
       $("#temp").html(json.params.airTemp)
       $("#tracktemp").html(json.params.trackTemp)
-      $("#state").html("#{json.params.racestate} #{scMessage(json)}")
+      $("#state").html("#{raceStateMessage(json.params.racestate)} #{scMessage(json)}")
       $("#state").attr('class', json.params.racestate)
       json.entries.forEach (entry) ->
         interval = (entry.gap - prevGap).toString()
@@ -66,6 +66,13 @@ weatherFor = (code) ->
     when 'mostly_sunny' then '🌤'
     when 'sunny' then '☀️'
     when 'rain' then '🌧'
+    else code
+
+raceStateMessage = (code) ->
+  switch code
+    when 'full_yellow' then 'FULL COURSE YELLOW (FCY)'
+    when 'slow_zones' then 'SLOW ZONES'
+    when 'green' then ''
     else code
 
 scMessage = (json) ->
