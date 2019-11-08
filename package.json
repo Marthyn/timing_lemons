@@ -6,6 +6,7 @@
     "@types/react-dom": "^16.8.4",
     "jquery": "^3.4.1",
     "ts-loader": "3.5.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "set-value": "^2.0.1"
   }
 }
