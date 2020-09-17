@@ -1,10 +1,56 @@
+<%
+  fields = {
+      number: '#',
+      place: 'P',
+      placeInClass: 'PIC',
+      lastLap: 'Last',
+      gap: 'Gap',
+      interval: 'Int',
+      classGap: 'ClassGap',
+      classInterval: 'ClassInt',
+      sectorOne: 'S1',
+      sectorTwo: 'S2',
+      sectorThree: 'S3',
+      state: 'State',
+      driver: 'Driver',
+      team: 'Team',
+      laps: 'Laps',
+      stops: 'Stops',
+      best: 'Best',
+      bestSectorOne: 'BS1',
+      bestSectorTwo: 'BS2',
+      bestSectorThree: 'BS3'
+  }
+%>
+
 <div id="about">
 <h1>Lemons Timing</h1>
 <p>
   My name is Marthyn Olthof, programmer by day, motorsport lover also by day.
   You can support me by following me on github.com/marthyn (you can find the <a href="https://github.com/Marthyn/timing_lemons">source</a> there too). Or you can donate a coffee to my <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XPL8633DZPCNU&currency_code=EUR&source=url">PayPal</a>
+  Listen to the Hagerty Radio LeMans coverage for the best Le Mans experience: <a href="http://www.radiolemans.co/">www.radiolemans.co</a>
 </p>
-  <p> <a href='javascript:;' onclick="$('#about').hide()">hide this shit</a></p>
+<p> <a href='javascript:;' onclick="$('#about').hide()">hide this</a></p>
+</div>
+<div>
+  <div id="filters">
+    <div id="checkboxes">
+      <% fields.each do |key, field| %>
+        <label for='checkbox-<%= key %>'>
+        <input type='checkbox' checked id='checkbox-<%= key %>' /><%= field %></label>
+      <% end %>
+    </div>
+  </div>
+  <div id="styles">
+    <label for='light'>
+      Light
+      <input id='light' type='radio' name='styles' value='light' checked />
+    </label>
+    <label for='dark'>
+      Dark
+      <input id='dark' type='radio' name='styles' value='dark' />
+    </label>
+</div>
 </div>
 <table class="table table-striped sticky-header">
   <thead>
@@ -26,29 +72,7 @@
   </tr>
 </table>
 <table class="table">
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">P</th>
-    <th scope="col">PIC</th>
-    <th scope="col">Last lap</th>
-    <th scope="col">Gap</th>
-    <th scope="col">Int</th>
-    <th scope="col">ClassGap</th>
-    <th scope="col">ClassInt</th>
-    <th scope="col">S1</th>
-    <th scope="col">S2</th>
-    <th scope="col">S3</th>
-    <th scope="col">State</th>
-    <th scope="col">Driver</th>
-    <th scope="col">Team</th>
-    <th scope="col">Laps</th>
-    <th scope="col">Stops</th>
-    <th scope="col">Best lap</th>
-    <th scope="col">BS1</th>
-    <th scope="col">BS2</th>
-    <th scope="col">BS3</th>
-  </tr>
+  <thead id="tableLabels">
   </thead>
   <tbody id="data">
   </tbody>

@@ -18,3 +18,11 @@
 //= require timing
 //= require bootstrap-sprockets
 //= require_tree .
+
+let expanded = false;
+
+$( document ).ready(function() {
+  $("input[name='styles']").change(function(element) {
+    $("body").attr('class', element.target.value)
+  })
+})
