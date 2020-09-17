@@ -4,6 +4,13 @@ td {
 }
 
 .light {
+  @keyframes blinkingBackgroundLight{
+    0%		{ background-color: #ffffff;}
+    25%		{ background-color: beige;}
+    50%		{ background-color: #ffffff;}
+    75%		{ background-color: beige;}
+    100%	{ background-color: #ffffff;}
+  }
 }
 .LMP1 {
   background-color: rgb(228, 31, 24);
@@ -27,6 +34,8 @@ td {
 
 .table {
   border: 0px;
+
+  margin-top: -17px;
 
   th {
     padding-left: 2px;
@@ -89,10 +98,10 @@ td {
 }
 
 .blink {
-  -webkit-animation: blinking 1s infinite; /* Safari 4+ */
-  -moz-animation: blinking 1s infinite; /* Fx 5+ */
-  -o-animation: blinking 1s infinite; /* Opera 12+ */
-  animation: blinking 1s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: blinkingBackgroundLight 2s infinite; /* Safari 4+ */
+  -moz-animation: blinkingBackgroundLight 2s infinite; /* Fx 5+ */
+  -o-animation: blinkingBackgroundLight 2s infinite; /* Opera 12+ */
+  animation: blinkingBackgroundLight 2s infinite; /* IE 10+, Fx 29+ */
 }
 
 @-webkit-keyframes blinking {
@@ -163,6 +172,21 @@ table.floatThead-table {
   $color: white; // #66ff54;
   color: $color;
   background-color: black;
+
+  @keyframes blinkingBackground{
+    0%		{ background-color: #000000;}
+    25%		{ background-color: deeppink;}
+    50%		{ background-color: #000000;}
+    75%		{ background-color: deeppink;}
+    100%	{ background-color: #000000;}
+  }
+
+  .blink {
+    -webkit-animation: blinkingBackground 2s infinite; /* Safari 4+ */
+    -moz-animation: blinkingBackground 2s infinite; /* Fx 5+ */
+    -o-animation: blinkingBackground 2s infinite; /* Opera 12+ */
+    animation: blinkingBackground 2s infinite; /* IE 10+, Fx 29+ */
+  }
 
   p {
     color: $color;
