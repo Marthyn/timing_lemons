@@ -28,16 +28,19 @@
 <p>
   My name is Marthyn Olthof, programmer by day, motorsport lover also by day.
   You can support me by following me on github.com/marthyn (you can find the <a href="https://github.com/Marthyn/timing_lemons">source</a> there too). Or you can donate a coffee to my <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XPL8633DZPCNU&currency_code=EUR&source=url">PayPal</a>
+</p>
+<p>
   Listen to the Hagerty Radio LeMans coverage for the best Le Mans experience: <a href="http://www.radiolemans.co/">www.radiolemans.co</a>
 </p>
-<p> <a href='javascript:;' onclick="$('#about').hide()">hide this</a></p>
+<p> <a href='javascript:;' onclick="$('#about').hide()">hide the header</a></p>
 </div>
+
 <div>
   <div id="filters">
     <div id="checkboxes">
       <% fields.each do |key, field| %>
         <label for='checkbox-<%= key %>'>
-        <input type='checkbox' checked id='checkbox-<%= key %>' /><%= field %></label>
+          <input type='checkbox' checked id='checkbox-<%= key %>' /><%= field %></label>
       <% end %>
     </div>
   </div>
@@ -50,8 +53,9 @@
       Dark
       <input id='dark' type='radio' name='styles' value='dark' />
     </label>
+  </div>
 </div>
-</div>
+
 <table class="table table-striped sticky-header">
   <thead>
   <tr>
