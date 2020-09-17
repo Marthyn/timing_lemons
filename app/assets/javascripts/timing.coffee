@@ -7,8 +7,8 @@ fields = {
   lastLap: 'Last',
   gap: 'Gap',
   interval: 'Int',
-  classGap: 'ClassGap',
-  classInterval: 'ClassInt',
+  classGap: 'CGap',
+  classInterval: 'CInt',
   sectorOne: 'S1',
   sectorTwo: 'S2',
   sectorThree: 'S3',
@@ -111,25 +111,25 @@ dataLoop()
 
 classGap = (entry) ->
   if entry.categoryPosition == 1
-    return 'CLASS LEADER'
+    return 'LIC'
   else
     return entry.classGap
 
 overalGap = (entry) ->
   if entry.ranking == 1
-    'LEADER'
+    'L'
   else
     entry.gap
 
 classInterval = (entry) ->
   if entry.categoryPosition == 1
-    return 'CLASS LEADER'
+    return 'LIC'
   else
     return entry.classGapPrev
 
 overalInterval = (entry) ->
   if entry.ranking == 1
-    'LEADER'
+    'L'
   else
     entry.gapPrev
 
