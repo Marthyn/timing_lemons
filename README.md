@@ -17,7 +17,7 @@ Follow all the action at [RadioLemans](http://radiolemans.co)! Follow [RadioLema
 ```bash
 git clone git@github.com:Marthyn/timing_lemons.git
 cd timing_lemons
-bundle timing_lemons
+bundle 
 FEED_URL=look_for_this_on_wec_site rails server 
 ```
 
