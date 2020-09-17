@@ -60,13 +60,13 @@ fetchData = () ->
           if $('#checkbox-lastLap').prop('checked')
             tr += "<td class='#{blinkLap(entry.lastLap, entry.bestlap)}'>#{entry.lastlap}</td>"
           if $('#checkbox-gap').prop('checked')
-            tr += "<td>#{entry.gap || 'LEADER'}</td>"
+            tr += "<td>#{overalInterval(entry) }</td>"
           if $('#checkbox-interval').prop('checked')
-            tr += "<td class='#{blink(interval, 1)}'>#{entry.gapPrev || 'LEADER'}</td>"
+            tr += "<td class='#{blink(interval, 1)}'>#{overalInterval(entry)}</td>"
           if $('#checkbox-classGap').prop('checked')
-            tr += "<td>#{entry.classGap || 'CLASS LEADER'}</td>"
+            tr += "<td>#{classInterval(entry)}</td>"
           if $('#checkbox-classInterval').prop('checked')
-            tr += "<td class='#{blink(interval, 1)}'>#{entry.classGapPrev || 'CLASS LEADER'}</td>"
+            tr += "<td class='#{blink(interval, 1)}'>#{classInterval(entry)}</td>"
           if $('#checkbox-sectorOne').prop('checked')
             tr += "<td>#{entry.currentSector1}</td>"
           if $('#checkbox-sectorTwo').prop('checked')
@@ -108,6 +108,18 @@ dataLoop = () ->
 
 fetchData()
 dataLoop()
+
+classInterval = (entry) ->
+  if entry.categoryPosition == 1
+    return 'CLASS LEADER'
+  else
+    return entry.gapPrev
+
+overalInterval = (entry) ->
+  if entry.ranking == 1
+    'LEADER'
+  else
+    entry.gap
 
 weatherFor = (code) ->
   switch code
