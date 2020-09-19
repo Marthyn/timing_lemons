@@ -1,4 +1,4 @@
-blinkWhenClose = false
+blinkWhenClose = true
 
 fields = {
   number: '#',
