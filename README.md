@@ -1,6 +1,6 @@
 # 🍋 Lemons Timing
 
-This project was created after https://timing.71wytham.org.uk/ was forced to take his amazing live timing screen offline. 
+This project was created after https://www.timing71.org/ was forced to take his amazing live timing screen offline. 
 You can load this with any JSON feed that fits the format 😉😉, if you look around the LEMONS site you can find it. 
 Mind you, you might need a bit of technological knowledge to get it running. You can follow me on [twitter](https://twitter.com/marthyn) for help, send it through DM or email me at info@voxapex.nl
 
@@ -11,6 +11,10 @@ To run the project make sure you can run any Ruby on Rails project https://gorai
 After installing everything you need you should be able to run rails server and go to [localhost:3000](localhost:3000) in your browser
 
 Follow all the action at [RadioLemans](http://radiolemans.co)! Follow [RadioLemans](https://twitter.com/radiolemans) on twitter as well. 
+
+# ⚠️ Warning ⚠️
+
+As of last race, Portimao 8HR, the feed that was available before isn't anymore apparently (thanks Gareth for pointing it out in [this issue](https://github.com/Marthyn/timing_lemons/issues/20)). When the next race is on (6H Monza) I will try to fix this but it might be that they fixed their feed so you cannot access it anymore from a different source. If so I will close this project since there are other ways to then get a better timing, like the extention [Better Timing](https://github.com/hankscorpio83/better-timing)
 
 ### Setup (if you are able to run the newest version of Ruby on Rails)
 
