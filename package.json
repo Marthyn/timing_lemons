@@ -7,6 +7,6 @@
     "jquery": "^3.5.0",
     "ts-loader": "3.5.0",
     "typescript": "^3.5.2",
-    "set-value": "^2.0.1"
+    "set-value": "^4.0.1"
   }
 }
